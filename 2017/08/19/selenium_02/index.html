@@ -5,13 +5,16 @@
   
   <title>selenium02 - 元素的定位 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="我们以上一篇的代码为例： from selenium import webdriver  driver = webdriver.Chrome()   driver.get(&quot;http://www.baidu.com&quot;)   driver.find_element_by_id(&quot;kw&quot;).send_keys(&quot;selenium&quot;)   driver.find_element_by_id(&quot;su&quot;).">
+<meta property="og:type" content="article">
 <meta property="og:title" content="selenium02 - 元素的定位">
-<meta property="og:url" content="http://yoursite.com/2017/09/22/selenium_02/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/08/19/selenium_02/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:updated_time" content="2017-09-21T17:50:50.020Z">
+<meta property="og:description" content="我们以上一篇的代码为例： from selenium import webdriver  driver = webdriver.Chrome()   driver.get(&quot;http://www.baidu.com&quot;)   driver.find_element_by_id(&quot;kw&quot;).send_keys(&quot;selenium&quot;)   driver.find_element_by_id(&quot;su&quot;).">
+<meta property="og:updated_time" content="2017-09-21T18:00:22.938Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="selenium02 - 元素的定位">
+<meta name="twitter:description" content="我们以上一篇的代码为例： from selenium import webdriver  driver = webdriver.Chrome()   driver.get(&quot;http://www.baidu.com&quot;)   driver.find_element_by_id(&quot;kw&quot;).send_keys(&quot;selenium&quot;)   driver.find_element_by_id(&quot;su&quot;).">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -49,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -62,8 +65,8 @@
       <div class="outer">
         <section id="main"><article id="post-selenium_02" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/09/22/selenium_02/" class="article-date">
-  <time datetime="2017-09-21T17:50:18.000Z" itemprop="datePublished">2017-09-22</time>
+    <a href="/2017/08/19/selenium_02/" class="article-date">
+  <time datetime="2017-08-18T17:50:18.000Z" itemprop="datePublished">2017-08-19</time>
 </a>
     
   </div>
@@ -82,11 +85,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>我们以上一篇的代码为例：</p>
+<pre><code class="python"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver
+
+driver = webdriver.Chrome()  
+driver.get(<span class="string">"http://www.baidu.com"</span>)  
+driver.find_element_by_id(<span class="string">"kw"</span>).send_keys(<span class="string">"selenium"</span>)  
+driver.find_element_by_id(<span class="string">"su"</span>).click()  
+driver.quit()
+</code></pre>
+<p>要了解到底什么是元素定位，这里我们用chrome浏览器举例说明。先打开chrome浏览器，输入网址”<a href="http://www.baidu.com&quot;然后回车，待百度页面加载完成后，敲击键盘上的“F12”键，我们会看到如下的一个界面被加载出来" target="_blank" rel="external">http://www.baidu.com&quot;然后回车，待百度页面加载完成后，敲击键盘上的“F12”键，我们会看到如下的一个界面被加载出来</a>:  </p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/22/selenium_02/" data-id="cj7ur7d15000124jawzaei7za" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/19/selenium_02/" data-id="cj7urpnen0001j0jamrlbvjvf" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -97,7 +110,7 @@
   
   
     <a href="/2017/08/17/selenium_01/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ancien</strong>
       <div class="article-nav-title">selenium01 - 简单的开始</div>
     </a>
   
@@ -122,7 +135,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li></ul>
     </div>
   </div>
 
@@ -130,12 +143,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/09/22/selenium_02/">selenium02 - 元素的定位</a>
+            <a href="/2017/08/19/selenium_02/">selenium02 - 元素的定位</a>
           </li>
         
           <li>
@@ -155,7 +168,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

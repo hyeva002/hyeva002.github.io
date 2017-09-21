@@ -14,7 +14,7 @@
 <meta property="og:image" content="https://github.com/hyeva002/hello-world/blob/master/pic_python_selenium/python_install_package.png?raw=true">
 <meta property="og:image" content="https://github.com/hyeva002/hello-world/blob/master/pic_python_selenium/python_path.png?raw=true">
 <meta property="og:image" content="https://github.com/hyeva002/hello-world/blob/master/pic_python_selenium/pip_install_selenium.png?raw=true">
-<meta property="og:updated_time" content="2017-09-21T17:49:53.139Z">
+<meta property="og:updated_time" content="2017-09-21T17:57:33.955Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="selenium01 - 简单的开始">
 <meta name="twitter:description" content="今天web前端自动化测试基本已经成为测试工程师的标配技能，而要从UI层面对网页内容进行自动化测试，selenium是当仁不让的最佳选择。我们这里指的selenium，是从selnium2.0开始发布的 webdriver 协议。今天webdriver协议现已经成为业内公认的浏览器ui测试的标准实现。 什么是UI自动化测试？简单的说，如果我们在测试过程中，不通过脚本向服务器端发送任何命令，而仅仅用操">
@@ -56,9 +56,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -101,7 +101,7 @@
 <p>2 安装pip<br>pip是python的包管理工具，是我们可以很方便的用简单的命令行完成第三方包的安装和配置。  </p>
 <p>3 安装selenium<br>在cmd下，通过pip命令  pip install selenium  直接安装selenium。如下图<br><img src="https://github.com/hyeva002/hello-world/blob/master/pic_python_selenium/pip_install_selenium.png?raw=true" alt="">  </p>
 <h4 id="下面我们一起来完成第一个自动化测试脚本"><a href="#下面我们一起来完成第一个自动化测试脚本" class="headerlink" title="下面我们一起来完成第一个自动化测试脚本"></a>下面我们一起来完成第一个自动化测试脚本</h4><p>需求：打开百度页面并搜索关键词“selenium”</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</div><div class="line"></div><div class="line">driver = webdriver.Chrome()  </div><div class="line">driver.get(<span class="string">"http://www.baidu.com"</span>)  </div><div class="line">driver.find_element_by_id(<span class="string">"kw"</span>).send_keys(<span class="string">"selenium"</span>)  </div><div class="line">driver.find_element_by_id(<span class="string">"su"</span>).click()  </div><div class="line">driver.quit()</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</div><div class="line"></div><div class="line">driver = webdriver.Chrome()  </div><div class="line">driver.get(<span class="string">"http://www.baidu.com"</span>)  </div><div class="line">driver.find_element_by_id(<span class="string">"kw"</span>).send_keys(<span class="string">"selenium"</span>)  </div><div class="line">driver.find_element_by_id(<span class="string">"su"</span>).click()  </div><div class="line">driver.quit()</div></pre></td></tr></table></figure>
 <p>把上面这段代码复制到文件中，并将文件名改为’baidu.py’，之后到命令行下输入命令：python baidu.py, 代码执行的时候会打开一个浏览器实例并执行一系列操作。</p>
 <h4 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver <span class="comment">#引入selenium的webdriver模块</span></div></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">driver = webdriver.Chrome() <span class="comment">#实例化一个Chrome浏览器</span></div><div class="line">driver.get(<span class="string">"http://www.baidu.com"</span>) <span class="comment">#通过之前创建的chrome浏览器实例打开网址'http://www.baidu.com'</span></div></pre></td></tr></table></figure>
@@ -111,7 +111,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/17/selenium_01/" data-id="cj7ur7d0y000024japmh9vg6g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/17/selenium_01/" data-id="cj7urpnef0000j0jacy0e0dll" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -120,8 +120,8 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/09/22/selenium_02/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+    <a href="/2017/08/19/selenium_02/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
       <div class="article-nav-title">
         
           selenium02 - 元素的定位
@@ -151,7 +151,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li></ul>
     </div>
   </div>
 
@@ -159,12 +159,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/09/22/selenium_02/">selenium02 - 元素的定位</a>
+            <a href="/2017/08/19/selenium_02/">selenium02 - 元素的定位</a>
           </li>
         
           <li>
@@ -184,7 +184,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

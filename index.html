@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -115,7 +115,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/19/selenium_02/" data-id="cj7vlw8ey000160jay0cugz8l" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/08/19/selenium_02/" data-id="cj7w5pren0003a8jax3w5wfkz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -175,7 +175,154 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/17/selenium_01/" data-id="cj7vlw8er000060jaxwrg94fp" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/08/17/selenium_01/" data-id="cj7w5prek0002a8jagk5dpkrf" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Java_byte与string的相互转换" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/11/Java_byte与string的相互转换/" class="article-date">
+  <time datetime="2017-07-10T16:42:05.000Z" itemprop="datePublished">2017-07-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/11/Java_byte与string的相互转换/">Java_byte与string相互转换</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="将-String-转化为-byte"><a href="#将-String-转化为-byte" class="headerlink" title="将 String 转化为 byte:"></a>将 String 转化为 byte:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">byte</span>[] stringToByteArray(String str) &#123;</div><div class="line">		<span class="keyword">if</span> (str == <span class="keyword">null</span>) &#123;</div><div class="line">			<span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		<span class="keyword">byte</span>[] byteArray = str.getBytes();</div><div class="line">		System.out.println(byteArray);</div><div class="line">		<span class="keyword">return</span> byteArray;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<h4 id="将-byte-转化为-String"><a href="#将-byte-转化为-String" class="headerlink" title="将 byte 转化为 String:"></a>将 byte 转化为 String:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">byteArrayToString</span><span class="params">(<span class="keyword">byte</span>[] byteArray)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (byteArray == <span class="keyword">null</span>) &#123;</div><div class="line">			<span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		String str = <span class="keyword">new</span> String(byteArray);</div><div class="line">		<span class="keyword">return</span> str;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/11/Java_byte与string的相互转换/" data-id="cj7w5prea0000a8jayww7l6qe" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-python_如何判断一个输入的字符串符合IP地址格式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/07/python_如何判断一个输入的字符串符合IP地址格式/" class="article-date">
+  <time datetime="2017-07-07T03:19:13.000Z" itemprop="datePublished">2017-07-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/07/python_如何判断一个输入的字符串符合IP地址格式/">python_如何判断一个输入的字符串符合IP地址格式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>需求： 接受一个来自外部的输入，并判断输入的字符串是否符合IP地址的条件。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">import</span> urllib</div><div class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</div><div class="line"></div><div class="line">ip_input = input(<span class="string">'Please input a number'</span>)</div><div class="line">li = [<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>]</div><div class="line">print(li)</div><div class="line"></div><div class="line">p = re.compile(<span class="string">'^((25[0-5]|2[0-4]\d|[01]?\d\d?)\.)&#123;3&#125;(25[0-5]|2[0-4]\d|[01]?\d\d?)$'</span>)  <span class="comment">#使用正则表达式筛选出符合IP地址条件的字符串</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> (p.match(ip_input) != <span class="keyword">None</span>):</div><div class="line">	print(<span class="string">'This is an IP address'</span>)</div><div class="line"><span class="keyword">else</span>:</div><div class="line">	print(<span class="string">'It'</span>s <span class="keyword">not</span> an Ip address)</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/07/python_如何判断一个输入的字符串符合IP地址格式/" data-id="cj7w5prer0005a8jawhwn8upe" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Java_在遍历 ArrayList 时移除一个元素" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/04/Java_在遍历 ArrayList 时移除一个元素/" class="article-date">
+  <time datetime="2017-07-03T16:54:10.000Z" itemprop="datePublished">2017-07-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/04/Java_在遍历 ArrayList 时移除一个元素/">Java_在遍历 ArrayList 时移除一个元素</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>该问题的<strong>关键</strong>在于使用 ArrayList 的 remove() 还是 Iterator 的 remove()方法。这有一段示例代码，是使用正确的方式来实现在遍历的过程中移除元素，而不会出现 ConcurrentModificationException 异常的示例代码。如果使用普通的遍历方式查找并删除符合条件的元素，因为随着元素的减少下标的值和数量会同时减少，所以会存在潜在的风险，故在这个场景下我们应该选择迭代器的remove().</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line"><span class="keyword">import</span> java.util.Iterator;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ErgodicArraylistAndDeleteNode</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">deleteElementInArratlist</span><span class="params">()</span> </span>&#123;</div><div class="line">		ArrayList&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;String&gt;(); </div><div class="line">		list.add(<span class="string">"one"</span>);  </div><div class="line">		list.add(<span class="string">"two"</span>);  </div><div class="line">		list.add(<span class="string">"three"</span>);  </div><div class="line">		list.add(<span class="string">"two"</span>);  </div><div class="line">		list.add(<span class="string">"two"</span>);  </div><div class="line">		Iterator&lt;String&gt; iter = list.iterator();  </div><div class="line">		<span class="keyword">while</span>(iter.hasNext())&#123;  </div><div class="line">		    String s = iter.next();  </div><div class="line">		    <span class="keyword">if</span>(s.equals(<span class="string">"two"</span>))&#123;  </div><div class="line">		        iter.remove();  </div><div class="line">		    &#125;  </div><div class="line">		&#125;  </div><div class="line">		System.out.println(list);  </div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		deleteElementInArratlist();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/04/Java_在遍历 ArrayList 时移除一个元素/" data-id="cj7w5preh0001a8jaufjlq4cj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Java_计算两个日期的时间差" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/19/Java_计算两个日期的时间差/" class="article-date">
+  <time datetime="2017-06-19T05:13:31.000Z" itemprop="datePublished">2017-06-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/19/Java_计算两个日期的时间差/">Java_计算两个日期的时间差</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.Date;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CalculateDate</span> </span>&#123;</div><div class="line">	<span class="comment">//计算两个日期之间的差距，最后给出的单位是天</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">long</span> <span class="title">dateDiff</span><span class="params">(Date d1, Date d2)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">		<span class="keyword">long</span> n1 = d1.getTime();</div><div class="line">		<span class="keyword">long</span> n2 = d2.getTime();</div><div class="line">		<span class="keyword">long</span> diff = Math.abs(n1 - n2);</div><div class="line"></div><div class="line">		diff /= <span class="number">3600</span> * <span class="number">1000</span> * <span class="number">24</span>;</div><div class="line">		<span class="keyword">return</span> diff;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/19/Java_计算两个日期的时间差/" data-id="cj7w5prep0004a8jadgh25a3q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -202,7 +349,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
     </div>
   </div>
 
@@ -210,7 +357,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -220,6 +367,18 @@
         
           <li>
             <a href="/2017/08/17/selenium_01/">selenium01 - 简单的开始</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/11/Java_byte与string的相互转换/">Java_byte与string相互转换</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/07/python_如何判断一个输入的字符串符合IP地址格式/">python_如何判断一个输入的字符串符合IP地址格式</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/04/Java_在遍历 ArrayList 时移除一个元素/">Java_在遍历 ArrayList 时移除一个元素</a>
           </li>
         
       </ul>
@@ -235,7 +394,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

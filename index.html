@@ -86,30 +86,39 @@
         <p>我们以上一篇的代码为例：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</div><div class="line"></div><div class="line">driver = webdriver.Chrome()  </div><div class="line">driver.get(<span class="string">"http://www.baidu.com"</span>)  </div><div class="line">driver.find_element_by_id(<span class="string">"kw"</span>).send_keys(<span class="string">"selenium"</span>)  </div><div class="line">driver.find_element_by_id(<span class="string">"su"</span>).click()  </div><div class="line">driver.quit()</div></pre></td></tr></table></figure>
 <p>为了了解到底什么是元素定位，<br>这里我们用chrome浏览器举例说明。先打开chrome浏览器，输入网址 <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a> 然后回车，待百度页面加载完成后，敲击键盘上的“F12”键，我们会看到如下的一个界面被加载出来:  </p>
-<p><img src="http://wx2.sinaimg.cn/large/006KQRhkgy1fjs1ikv1xxj31gx0f3gn1.jpg" alt=""></p>
+<div align="center"><br><img src="http://wx2.sinaimg.cn/large/006KQRhkgy1fjs1ikv1xxj31gx0f3gn1.jpg"><br></div>
+
 <p>默认会之间加载到’console’界面，我们会看到console的界面中有百度四百年前发布的简历投递邮箱，看上去是不是有点碍眼？要想清空console界面，我们只需要输入命令 clear() 并回车，就能够让界面重新变得洁白如新。</p>
-<p><img src="http://wx3.sinaimg.cn/large/006KQRhkgy1fjs1ofl1pwj30in06tq30.jpg" alt=""></p>
+<div align="center"><br><img src="http://wx3.sinaimg.cn/large/006KQRhkgy1fjs1ofl1pwj30in06tq30.jpg"><br></div>
+
 <p>下面让我们正式开始定位，首先选取并单击左上角的图标</p>
-<p><img src="http://wx1.sinaimg.cn/large/006KQRhkgy1fjs1y16rp0j30ix01jt8l.jpg" alt=""></p>
-<p>然后将光标移动到我们想要定位的搜索页面输入框当中，你会发现输入框的范围进入了高亮状态，表明这一部分可以被选取定位。输入框左上角的 “input#kw.s_ipt” 实际上已经是一个正确的定位，但chrome console默认使用的是’cssSelector’定位，我们这里继续往下看之前脚本里面的 id(“kw”) 是什么意思。<br><img src="http://wx1.sinaimg.cn/large/006KQRhkgy1fjs1y1r1uwj30m205ngli.jpg" alt=""></p>
+<div align="center"><br><img src="http://wx1.sinaimg.cn/large/006KQRhkgy1fjs1y16rp0j30ix01jt8l.jpg"><br></div>
+
+<p>然后将光标移动到我们想要定位的搜索页面输入框当中，你会发现输入框的范围进入了高亮状态，表明这一部分可以被选取定位。输入框左上角的 “input#kw.s_ipt” 实际上已经是一个正确的定位，但chrome console默认使用的是’cssSelector’定位，我们这里继续往下看之前脚本里面的 id(“kw”) 是什么意思。</p>
+<div align="center"><br><img src="http://wx1.sinaimg.cn/large/006KQRhkgy1fjs1y1r1uwj30m205ngli.jpg"><br></div>
+
 <p>点击高亮的输入区域，在console的界面里会加载网页的源代码，选取的部分进入高亮状态，入下图：</p>
-<p><img src="http://wx2.sinaimg.cn/large/006KQRhkgy1fjs1y2bg4rj30l20cpgmf.jpg" alt=""></p>
+<div align="center"><br><img src="http://wx2.sinaimg.cn/large/006KQRhkgy1fjs1y2bg4rj30l20cpgmf.jpg"><br></div>
+
 <p>高亮的这一段代码  </p>
 <p>input type=”text” class=”s_ipt” name=”wd” id=”kw” maxlength=”100” autocomplete=”off”</p>
-<p>其中的一个属性 id=”kw” 就是我们之前在脚本中用来定位的属性，是不是很简单呢？ find_element_by_id表明我们在selenium执行时使用id属性作为定位标准，只要找到正确的id就能成功定位到元素并进行相应操作。</p>
+<p>其中的一个属性 id=”kw” 就是我们之前在脚本中用来定位的属性。 find_element_by_id表明我们在selenium执行时使用id属性作为定位标准，只要找到正确的id就能成功定位到元素并进行相应操作。</p>
 <h4 id="怎么判断定位是否成功"><a href="#怎么判断定位是否成功" class="headerlink" title="怎么判断定位是否成功"></a>怎么判断定位是否成功</h4><p>验证定位是否成功，我们可以直接运行脚本观察，但是这种做法耗费的时间成本无疑很大，这里有一个更简便的方法，直接在chrome的console里就可以验证定位是否成功。</p>
 <p>首先在console里输入$(“#kw”)</p>
-<p><img src="http://wx1.sinaimg.cn/large/006KQRhkgy1fjs87trqpdj30is03y0sl.jpg" alt=""></p>
+<div align="center"><br><img src="http://wx1.sinaimg.cn/large/006KQRhkgy1fjs87trqpdj30is03y0sl.jpg"><br></div>
+
 <p>回车之后会看到console里有一个返回值 [input#kw.s_ipt, context: document, selector: “#kw”]</p>
-<p><img src="http://wx3.sinaimg.cn/large/006KQRhkgy1fjs87u5peaj30bw02ua9v.jpg" alt=""></p>
+<div align="center"><br><img src="http://wx3.sinaimg.cn/large/006KQRhkgy1fjs87u5peaj30bw02ua9v.jpg"><br></div>
+
 <p>展开这个返回值，将光标移动到 <strong>0: input#kw.s_ipt</strong>, 这时候会发现搜索引擎的文本输入框已经高亮了，说明我们输入的定位成功的定位到了想要输入文本的位置。而console返回的 input#kw.s_ipt 是该元素一个更详细的定位，这种定位方式叫cssSelector，也是我们之后会着重讲到的定位方式，也可以到 <a href="http://www.w3school.com.cn/css/css_selector_type.asp" title="wschool css选择器" target="_blank" rel="external">http://www.w3school.com.cn/css/css_selector_type.asp</a> 部分了解相关内容。</p>
-<p><img src="http://wx4.sinaimg.cn/large/006KQRhkgy1fjs87unghyj30qn0c8glt.jpg" alt=""></p>
+<div align="center"><br><img src="http://wx4.sinaimg.cn/large/006KQRhkgy1fjs87unghyj30qn0c8glt.jpg"><br></div>
+
 <p>还有一点需要注意的是，我们之前输入 $(“#kw”) 之后，console返回的定位结果是唯一，这意味着我们用现有的值就可以准确定位，如果返回的值不唯一，则还需要继续用更多的属性组合定位，以保证唯一定位。理论上来说，一个页面里id的值是唯一的，但在实际工作中很可能遇到id重复的情况，因为即使id重复了，html页面仍然可以正确解析，所以如果id能够唯一定位，我们可以首选它，如果不能，则最好选择 cssSelector或者xPath这两种定位方法。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/19/selenium_02/" data-id="cj7vgmlyw0000t4jadlfsxory" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/08/19/selenium_02/" data-id="cj7vltp2a0001v8jauw21pe6w" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -141,17 +150,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天web前端自动化测试基本已经成为测试工程师的标配技能，而要从UI层面对网页内容进行自动化测试，selenium是当仁不让的最佳选择。我们这里指的selenium，是从selnium2.0开始发布的 webdriver 协议。今天webdriver协议现已经成为业内公认的浏览器ui测试的标准实现。</p>
+        <div align="center"><br><img src="http://wx3.sinaimg.cn/large/006KQRhkgy1fjseayl6wqj30go06yglj.jpg"><br></div>
+
+<p>今天web前端自动化测试基本已经成为测试工程师的标配技能，而要从UI层面对网页内容进行自动化测试，selenium是当仁不让的最佳选择。我们这里指的selenium，是从selnium2.0开始发布的 webdriver 协议。今天webdriver协议现已经成为业内公认的浏览器ui测试的标准实现。</p>
 <h4 id="什么是UI自动化测试？"><a href="#什么是UI自动化测试？" class="headerlink" title="什么是UI自动化测试？"></a>什么是UI自动化测试？</h4><p>简单的说，如果我们在测试过程中，不通过脚本向服务器端发送任何命令，而仅仅用操作页面元素的方法达到测试目的，那么这种自动化就可以称作UI自动化。  </p>
 <h4 id="为什么选择python？"><a href="#为什么选择python？" class="headerlink" title="为什么选择python？"></a>为什么选择python？</h4><p>python简洁易学，相比于java部署一个可以运行的selenium环境所需要花的功夫，python只需要一个命令行就可以完成，可以把更多的精力放在实现本身。  </p>
 <h4 id="使用什么编辑器？"><a href="#使用什么编辑器？" class="headerlink" title="使用什么编辑器？"></a>使用什么编辑器？</h4><p>在这个教程中我们使用 Sublime Text 作为演示编辑器。</p>
 <h4 id="下面让我们开始准备环境"><a href="#下面让我们开始准备环境" class="headerlink" title="下面让我们开始准备环境"></a>下面让我们开始准备环境</h4><p>1 安装python<br>windows环境下，我们需要先从官网下载合适的安装包，最好使用python3最新的稳定版</p>
-<p><img src="https://github.com/hyeva002/hello-world/blob/master/pic_python_selenium/python_install_package.png?raw=true" alt="python install package"> </p>
+<div align="center"><br><img src="https://github.com/hyeva002/hello-world/blob/master/pic_python_selenium/python_install_package.png?raw=true"><br></div>
+
 <p>下载完毕后双击安装包，根据提示一路安装直到完成。之后配置环境变量，将 你的python安装路径 以及 你的python安装路径\Scripts\ 这两个路径添加到环境变量的PATH当中，如下图:  </p>
-<p><img src="https://github.com/hyeva002/hello-world/blob/master/pic_python_selenium/python_path.png?raw=true" alt="">  </p>
+<div align="center"><br><img src="https://github.com/hyeva002/hello-world/blob/master/pic_python_selenium/python_path.png?raw=true"><br></div>
+
 <p>–<strong>【Linux环境下的安装请百度】</strong>–</p>
 <p>2 安装pip<br>pip是python的包管理工具，是我们可以很方便的用简单的命令行完成第三方包的安装和配置。  </p>
-<p>3 安装selenium<br>在cmd下，通过pip命令  pip install selenium  直接安装selenium。如下图<br><img src="https://github.com/hyeva002/hello-world/blob/master/pic_python_selenium/pip_install_selenium.png?raw=true" alt="">  </p>
+<p>3 安装selenium<br>在cmd下，通过pip命令  pip install selenium  直接安装selenium。如下图</p>
+<div align="center"><br><img src="https://github.com/hyeva002/hello-world/blob/master/pic_python_selenium/pip_install_selenium.png?raw=true"><br></div>
+
 <h4 id="下面我们一起来完成第一个自动化测试脚本"><a href="#下面我们一起来完成第一个自动化测试脚本" class="headerlink" title="下面我们一起来完成第一个自动化测试脚本"></a>下面我们一起来完成第一个自动化测试脚本</h4><p>需求：打开百度页面并搜索关键词“selenium”</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</div><div class="line"></div><div class="line">driver = webdriver.Chrome()  </div><div class="line">driver.get(<span class="string">"http://www.baidu.com"</span>)  </div><div class="line">driver.find_element_by_id(<span class="string">"kw"</span>).send_keys(<span class="string">"selenium"</span>)  </div><div class="line">driver.find_element_by_id(<span class="string">"su"</span>).click()  </div><div class="line">driver.quit()</div></pre></td></tr></table></figure>
 <p>把上面这段代码复制到文件中，并将文件名改为’baidu.py’，之后到命令行下输入命令：python baidu.py, 代码执行的时候会打开一个浏览器实例并执行一系列操作。</p>
@@ -163,7 +178,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/17/selenium_01/" data-id="cj7vgmlz20001t4jaoqwhtqlt" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/08/17/selenium_01/" data-id="cj7vltp230000v8jai1afxjyz" class="article-share-link">Partager</a>
       
       
     </footer>

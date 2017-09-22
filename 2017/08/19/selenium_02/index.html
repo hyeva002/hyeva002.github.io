@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://wx1.sinaimg.cn/large/006KQRhkgy1fjs87trqpdj30is03y0sl.jpg">
 <meta property="og:image" content="http://wx3.sinaimg.cn/large/006KQRhkgy1fjs87u5peaj30bw02ua9v.jpg">
 <meta property="og:image" content="http://wx4.sinaimg.cn/large/006KQRhkgy1fjs87unghyj30qn0c8glt.jpg">
-<meta property="og:updated_time" content="2017-09-22T04:43:17.517Z">
+<meta property="og:updated_time" content="2017-09-22T08:07:45.880Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="selenium02 - 元素的定位">
 <meta name="twitter:description" content="我们以上一篇的代码为例： 1234567from selenium import webdriverdriver = webdriver.Chrome()  driver.get(&quot;http://www.baidu.com&quot;)  driver.find_element_by_id(&quot;kw&quot;).send_keys(&quot;selenium&quot;)  driver.find_element_by_id(&quot;su&quot;">
@@ -97,30 +97,39 @@
         <p>我们以上一篇的代码为例：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</div><div class="line"></div><div class="line">driver = webdriver.Chrome()  </div><div class="line">driver.get(<span class="string">"http://www.baidu.com"</span>)  </div><div class="line">driver.find_element_by_id(<span class="string">"kw"</span>).send_keys(<span class="string">"selenium"</span>)  </div><div class="line">driver.find_element_by_id(<span class="string">"su"</span>).click()  </div><div class="line">driver.quit()</div></pre></td></tr></table></figure>
 <p>为了了解到底什么是元素定位，<br>这里我们用chrome浏览器举例说明。先打开chrome浏览器，输入网址 <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a> 然后回车，待百度页面加载完成后，敲击键盘上的“F12”键，我们会看到如下的一个界面被加载出来:  </p>
-<p><img src="http://wx2.sinaimg.cn/large/006KQRhkgy1fjs1ikv1xxj31gx0f3gn1.jpg" alt=""></p>
+<div align="center"><br><img src="http://wx2.sinaimg.cn/large/006KQRhkgy1fjs1ikv1xxj31gx0f3gn1.jpg"><br></div>
+
 <p>默认会之间加载到’console’界面，我们会看到console的界面中有百度四百年前发布的简历投递邮箱，看上去是不是有点碍眼？要想清空console界面，我们只需要输入命令 clear() 并回车，就能够让界面重新变得洁白如新。</p>
-<p><img src="http://wx3.sinaimg.cn/large/006KQRhkgy1fjs1ofl1pwj30in06tq30.jpg" alt=""></p>
+<div align="center"><br><img src="http://wx3.sinaimg.cn/large/006KQRhkgy1fjs1ofl1pwj30in06tq30.jpg"><br></div>
+
 <p>下面让我们正式开始定位，首先选取并单击左上角的图标</p>
-<p><img src="http://wx1.sinaimg.cn/large/006KQRhkgy1fjs1y16rp0j30ix01jt8l.jpg" alt=""></p>
-<p>然后将光标移动到我们想要定位的搜索页面输入框当中，你会发现输入框的范围进入了高亮状态，表明这一部分可以被选取定位。输入框左上角的 “input#kw.s_ipt” 实际上已经是一个正确的定位，但chrome console默认使用的是’cssSelector’定位，我们这里继续往下看之前脚本里面的 id(“kw”) 是什么意思。<br><img src="http://wx1.sinaimg.cn/large/006KQRhkgy1fjs1y1r1uwj30m205ngli.jpg" alt=""></p>
+<div align="center"><br><img src="http://wx1.sinaimg.cn/large/006KQRhkgy1fjs1y16rp0j30ix01jt8l.jpg"><br></div>
+
+<p>然后将光标移动到我们想要定位的搜索页面输入框当中，你会发现输入框的范围进入了高亮状态，表明这一部分可以被选取定位。输入框左上角的 “input#kw.s_ipt” 实际上已经是一个正确的定位，但chrome console默认使用的是’cssSelector’定位，我们这里继续往下看之前脚本里面的 id(“kw”) 是什么意思。</p>
+<div align="center"><br><img src="http://wx1.sinaimg.cn/large/006KQRhkgy1fjs1y1r1uwj30m205ngli.jpg"><br></div>
+
 <p>点击高亮的输入区域，在console的界面里会加载网页的源代码，选取的部分进入高亮状态，入下图：</p>
-<p><img src="http://wx2.sinaimg.cn/large/006KQRhkgy1fjs1y2bg4rj30l20cpgmf.jpg" alt=""></p>
+<div align="center"><br><img src="http://wx2.sinaimg.cn/large/006KQRhkgy1fjs1y2bg4rj30l20cpgmf.jpg"><br></div>
+
 <p>高亮的这一段代码  </p>
 <p>input type=”text” class=”s_ipt” name=”wd” id=”kw” maxlength=”100” autocomplete=”off”</p>
-<p>其中的一个属性 id=”kw” 就是我们之前在脚本中用来定位的属性，是不是很简单呢？ find_element_by_id表明我们在selenium执行时使用id属性作为定位标准，只要找到正确的id就能成功定位到元素并进行相应操作。</p>
+<p>其中的一个属性 id=”kw” 就是我们之前在脚本中用来定位的属性。 find_element_by_id表明我们在selenium执行时使用id属性作为定位标准，只要找到正确的id就能成功定位到元素并进行相应操作。</p>
 <h4 id="怎么判断定位是否成功"><a href="#怎么判断定位是否成功" class="headerlink" title="怎么判断定位是否成功"></a>怎么判断定位是否成功</h4><p>验证定位是否成功，我们可以直接运行脚本观察，但是这种做法耗费的时间成本无疑很大，这里有一个更简便的方法，直接在chrome的console里就可以验证定位是否成功。</p>
 <p>首先在console里输入$(“#kw”)</p>
-<p><img src="http://wx1.sinaimg.cn/large/006KQRhkgy1fjs87trqpdj30is03y0sl.jpg" alt=""></p>
+<div align="center"><br><img src="http://wx1.sinaimg.cn/large/006KQRhkgy1fjs87trqpdj30is03y0sl.jpg"><br></div>
+
 <p>回车之后会看到console里有一个返回值 [input#kw.s_ipt, context: document, selector: “#kw”]</p>
-<p><img src="http://wx3.sinaimg.cn/large/006KQRhkgy1fjs87u5peaj30bw02ua9v.jpg" alt=""></p>
+<div align="center"><br><img src="http://wx3.sinaimg.cn/large/006KQRhkgy1fjs87u5peaj30bw02ua9v.jpg"><br></div>
+
 <p>展开这个返回值，将光标移动到 <strong>0: input#kw.s_ipt</strong>, 这时候会发现搜索引擎的文本输入框已经高亮了，说明我们输入的定位成功的定位到了想要输入文本的位置。而console返回的 input#kw.s_ipt 是该元素一个更详细的定位，这种定位方式叫cssSelector，也是我们之后会着重讲到的定位方式，也可以到 <a href="http://www.w3school.com.cn/css/css_selector_type.asp" title="wschool css选择器" target="_blank" rel="external">http://www.w3school.com.cn/css/css_selector_type.asp</a> 部分了解相关内容。</p>
-<p><img src="http://wx4.sinaimg.cn/large/006KQRhkgy1fjs87unghyj30qn0c8glt.jpg" alt=""></p>
+<div align="center"><br><img src="http://wx4.sinaimg.cn/large/006KQRhkgy1fjs87unghyj30qn0c8glt.jpg"><br></div>
+
 <p>还有一点需要注意的是，我们之前输入 $(“#kw”) 之后，console返回的定位结果是唯一，这意味着我们用现有的值就可以准确定位，如果返回的值不唯一，则还需要继续用更多的属性组合定位，以保证唯一定位。理论上来说，一个页面里id的值是唯一的，但在实际工作中很可能遇到id重复的情况，因为即使id重复了，html页面仍然可以正确解析，所以如果id能够唯一定位，我们可以首选它，如果不能，则最好选择 cssSelector或者xPath这两种定位方法。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/19/selenium_02/" data-id="cj7vgmlyw0000t4jadlfsxory" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/08/19/selenium_02/" data-id="cj7vltp2a0001v8jauw21pe6w" class="article-share-link">Partager</a>
       
       
     </footer>

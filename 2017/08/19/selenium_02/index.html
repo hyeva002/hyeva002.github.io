@@ -5,12 +5,13 @@
   
   <title>selenium02 - 元素的定位 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我们以上一篇的代码为例： 1234567from selenium import webdriverdriver = webdriver.Chrome()  driver.get(&quot;http://www.baidu.com&quot;)  driver.find_element_by_id(&quot;kw&quot;).send_keys(&quot;selenium&quot;)  driver.find_element_by_id(&quot;su&quot;">
+  <meta name="description" content="我们以上一篇的代码为例：1234567from selenium import webdriverdriver = webdriver.Chrome()  driver.get(&quot;http://www.baidu.com&quot;)  driver.find_element_by_id(&quot;kw&quot;).send_keys(&quot;selenium&quot;)  driver.find_element_by_id(&quot;su&quot;)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="selenium02 - 元素的定位">
 <meta property="og:url" content="http://yoursite.com/2017/08/19/selenium_02/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="我们以上一篇的代码为例： 1234567from selenium import webdriverdriver = webdriver.Chrome()  driver.get(&quot;http://www.baidu.com&quot;)  driver.find_element_by_id(&quot;kw&quot;).send_keys(&quot;selenium&quot;)  driver.find_element_by_id(&quot;su&quot;">
+<meta property="og:description" content="我们以上一篇的代码为例：1234567from selenium import webdriverdriver = webdriver.Chrome()  driver.get(&quot;http://www.baidu.com&quot;)  driver.find_element_by_id(&quot;kw&quot;).send_keys(&quot;selenium&quot;)  driver.find_element_by_id(&quot;su&quot;)">
+<meta property="og:image" content="http://wx3.sinaimg.cn/large/006KQRhkgy1fjseayl6wqj30go06yglj.jpg">
 <meta property="og:image" content="http://wx2.sinaimg.cn/large/006KQRhkgy1fjs1ikv1xxj31gx0f3gn1.jpg">
 <meta property="og:image" content="http://wx3.sinaimg.cn/large/006KQRhkgy1fjs1ofl1pwj30in06tq30.jpg">
 <meta property="og:image" content="http://wx1.sinaimg.cn/large/006KQRhkgy1fjs1y16rp0j30ix01jt8l.jpg">
@@ -19,11 +20,11 @@
 <meta property="og:image" content="http://wx1.sinaimg.cn/large/006KQRhkgy1fjs87trqpdj30is03y0sl.jpg">
 <meta property="og:image" content="http://wx3.sinaimg.cn/large/006KQRhkgy1fjs87u5peaj30bw02ua9v.jpg">
 <meta property="og:image" content="http://wx4.sinaimg.cn/large/006KQRhkgy1fjs87unghyj30qn0c8glt.jpg">
-<meta property="og:updated_time" content="2017-09-22T08:07:45.880Z">
+<meta property="og:updated_time" content="2017-09-22T08:10:00.304Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="selenium02 - 元素的定位">
-<meta name="twitter:description" content="我们以上一篇的代码为例： 1234567from selenium import webdriverdriver = webdriver.Chrome()  driver.get(&quot;http://www.baidu.com&quot;)  driver.find_element_by_id(&quot;kw&quot;).send_keys(&quot;selenium&quot;)  driver.find_element_by_id(&quot;su&quot;">
-<meta name="twitter:image" content="http://wx2.sinaimg.cn/large/006KQRhkgy1fjs1ikv1xxj31gx0f3gn1.jpg">
+<meta name="twitter:description" content="我们以上一篇的代码为例：1234567from selenium import webdriverdriver = webdriver.Chrome()  driver.get(&quot;http://www.baidu.com&quot;)  driver.find_element_by_id(&quot;kw&quot;).send_keys(&quot;selenium&quot;)  driver.find_element_by_id(&quot;su&quot;)">
+<meta name="twitter:image" content="http://wx3.sinaimg.cn/large/006KQRhkgy1fjseayl6wqj30go06yglj.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -94,10 +95,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我们以上一篇的代码为例：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</div><div class="line"></div><div class="line">driver = webdriver.Chrome()  </div><div class="line">driver.get(<span class="string">"http://www.baidu.com"</span>)  </div><div class="line">driver.find_element_by_id(<span class="string">"kw"</span>).send_keys(<span class="string">"selenium"</span>)  </div><div class="line">driver.find_element_by_id(<span class="string">"su"</span>).click()  </div><div class="line">driver.quit()</div></pre></td></tr></table></figure>
-<p>为了了解到底什么是元素定位，<br>这里我们用chrome浏览器举例说明。先打开chrome浏览器，输入网址 <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a> 然后回车，待百度页面加载完成后，敲击键盘上的“F12”键，我们会看到如下的一个界面被加载出来:  </p>
-<div align="center"><br><img src="http://wx2.sinaimg.cn/large/006KQRhkgy1fjs1ikv1xxj31gx0f3gn1.jpg"><br></div>
+        <div align="center"><br><img src="http://wx3.sinaimg.cn/large/006KQRhkgy1fjseayl6wqj30go06yglj.jpg"><br></div><br>我们以上一篇的代码为例：<br><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</div><div class="line"></div><div class="line">driver = webdriver.Chrome()  </div><div class="line">driver.get(<span class="string">"http://www.baidu.com"</span>)  </div><div class="line">driver.find_element_by_id(<span class="string">"kw"</span>).send_keys(<span class="string">"selenium"</span>)  </div><div class="line">driver.find_element_by_id(<span class="string">"su"</span>).click()  </div><div class="line">driver.quit()</div></pre></td></tr></table></figure><br><br>为了了解到底什么是元素定位，<br>这里我们用chrome浏览器举例说明。先打开chrome浏览器，输入网址 <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a> 然后回车，待百度页面加载完成后，敲击键盘上的“F12”键，我们会看到如下的一个界面被加载出来:<br><br><div align="center"><br><img src="http://wx2.sinaimg.cn/large/006KQRhkgy1fjs1ikv1xxj31gx0f3gn1.jpg"><br></div>
 
 <p>默认会之间加载到’console’界面，我们会看到console的界面中有百度四百年前发布的简历投递邮箱，看上去是不是有点碍眼？要想清空console界面，我们只需要输入命令 clear() 并回车，就能够让界面重新变得洁白如新。</p>
 <div align="center"><br><img src="http://wx3.sinaimg.cn/large/006KQRhkgy1fjs1ofl1pwj30in06tq30.jpg"><br></div>
@@ -129,7 +127,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/19/selenium_02/" data-id="cj7vltp2a0001v8jauw21pe6w" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/08/19/selenium_02/" data-id="cj7vlw8ey000160jay0cugz8l" class="article-share-link">Partager</a>
       
       
     </footer>
